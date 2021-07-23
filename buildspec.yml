@@ -27,7 +27,7 @@ phases:
        - echo COMMITTER_DATE
        - aws codepipeline  list-action-executions --pipeline-name TestAPI  --region us-east-2 --max-items 1
        - aws codepipeline get-pipeline-execution --pipeline-name TestAPI --pipeline-execution-id 57f0a6aa-3b6f-4966-a473-e94f0dcfe90a
-       if [ $STAGE eq "dev" ]
+       if [ "$STAGE" eq "dev" ]
        then
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
