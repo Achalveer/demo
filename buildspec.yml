@@ -17,8 +17,13 @@ phases:
        
        - echo $CODEBUILD_START_TIME
        - echo $CODEBUILD_END_TIME
+       - echo $CODEBUILD_BUILD_SUCCEEDING
+       - echo  $CODEBUILD_BUILD_SUCCEEDING
+       - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+       - aws codepipeline get-pipeline-state --name
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
+       - ./test.sh
        - echo 'test file completed'
   post_build:
      commands: 
