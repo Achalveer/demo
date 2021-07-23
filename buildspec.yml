@@ -1,7 +1,10 @@
 version: 0.2
 env:
+    parameter-store:
+       API_KEY: API_KEY
     variables:
        rest_api_host: test.com
+       HOST_URL: "https://2c3vzm8l4c.execute-api.us-east-2.amazonaws.com"
     
 phases:
   install:
