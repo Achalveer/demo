@@ -25,7 +25,7 @@ phases:
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
        - ./test.sh
-       - echo 'test file completed'
+       - echo 'test file completed '
   post_build:
      commands: 
      
