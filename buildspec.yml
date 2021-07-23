@@ -21,10 +21,10 @@ phases:
        - echo  $CODEBUILD_BUILD_SUCCEEDING
        - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
        - echo COMMITTER_DATE
-       - aws codepipeline list-action-executions
+       
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
-       - ./test.sh
+       - test.sh
        - echo 'test file completed'
   post_build:
      commands: 
