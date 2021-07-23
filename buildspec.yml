@@ -21,7 +21,7 @@ phases:
        - echo  $CODEBUILD_BUILD_SUCCEEDING
        - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
        - echo COMMITTER_DATE
-       - aws codepipeline get-pipeline-execution --pipeline-name TestAPI  --region us-east-2 --max-items 1
+       - aws codepipeline list-pipeline-execution --pipeline-name TestAPI  --region us-east-2 --max-items 1
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
        - ./test.sh
