@@ -14,7 +14,7 @@ phases:
   build:
      commands: 
        - echo 'build started'
-       
+       - echo ${CODEBUILD_BUILD_NUMBER}
        - aws s3 cp s3://achal1/test.sh .
        - chmod +x test.sh
        - echo 'test file completed'
