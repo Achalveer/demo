@@ -1,3 +1,4 @@
+version: 0.2
 env:
     variables:
        rest_api_host: test.com
