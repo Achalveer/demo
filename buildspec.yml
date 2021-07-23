@@ -1,0 +1,30 @@
+
+env:
+    variables:
+       rest_api_host: test.com
+    
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+      java: openjdk8
+      
+    commands:
+      echo 'build started'
+      
+  build:
+     commands: 
+       - echo 'build started'
+       - gradle clean deploy
+       - aws s3 cp s3://achal1/test.sh .
+       - chmod +x test.sh
+       
+  post_build:
+     commands: 
+     
+        - echo post build
+        
+      
+      
+      
+      
