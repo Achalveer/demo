@@ -29,7 +29,7 @@ phases:
   post_build:
      commands: 
      
-        - echo "post build"
+        - echo "post build "
 
       
       
