@@ -22,6 +22,7 @@ phases:
        - echo $CODEBUILD_END_TIME
        - echo $CODEBUILD_BUILD_SUCCEEDING
        - echo  $CODEBUILD_BUILD_NUMBER
+       - echo $CODEBUILD_BUILD_ID
        - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
        - echo COMMITTER_DATE
        - aws codepipeline  list-action-executions --pipeline-name TestAPI  --region us-east-2 --max-items 1
